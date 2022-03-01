@@ -1,13 +1,16 @@
 const mongoose = require('mongoose');
 
-// Creating a schema for how post will look
+// Creating a schema for how posts will look
 
 const PostSchema = mongoose.Schema({
     title: {
         type: String,
         required: true
     },
-    description: String,
+    description: { 
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now
